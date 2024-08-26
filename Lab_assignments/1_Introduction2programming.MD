@@ -78,7 +78,7 @@ pwd
 
 Learn more using `man pwd`.
 
-**Question 2:** The `ls` command lists files and folders in your present directory. First, go back one directory by typing `cd /project/stuckert` Try both `ls -lt` and `ls -lht`. What is the difference between these commands. You may need to use the `man ls` command to learn more.
+**Question 2:** The `ls` command lists files and folders in your present directory. First, go back one directory by typing `cd /project/stuckert` Try both `ls` and `ls -l`. What is the difference between these commands. You may need to use the `man ls` command to learn more.
 
 **Question 3:** Create a new directory named `first_dir`. What command did you use to do this?
 

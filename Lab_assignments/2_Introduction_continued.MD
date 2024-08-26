@@ -81,9 +81,13 @@ A fun trick, you can set something to run through a range of numbers using the f
 
 **Question 5**: Write a for loop to print every 5th number from 5 to 100 (eg, it would go 5,10,15 and so on until 100). Paste in your code.
 
-Last weel we ran commands within a single line of code to set the output as a variable. We can do the same thing within a for loop. I will often use this to run a series of commands on all the raw data I have for a particular project. For example, if I want to run through all the fasta files in a I can use the `ls` functino to identify all the fasta files in a directory and set them as my variable. Assuming that I have all my data in a directory called `raw_data` and they all end in `.fasta` I can use the `ls` command and a wildcard character `*` to find all the fasta files like this: `ls raw_data/*.fasta`. This finds all the files that are in the `raw_data` directory whose file names end in `.fasta`.
+Last week we ran commands within a single line of code to set the output as a variable. We can do the same thing within a for loop. I will often use this to run a series of commands on all the raw data I have for a particular project. For example, if I want to run through all the fasta files in a I can use the `ls` function to identify all the fasta files in a directory and set them as my variable. Assuming that I have all my data in a directory called `raw_data` and they all end in `.fasta` I can use the `ls` command and a wildcard character `*` to find all the fasta files like this: `ls raw_data/*.fasta`. This finds all the files that are in the `raw_data` directory whose file names end in `.fasta`.
 
-**Question 6**: Write a for loops that uses `ls` to print all the fasta file names in the directory `/project/stuckert/bioinformatics/lab2/fasta_files` to screen. Paste in the code. 
+**Question 6**: Write a for loops that uses `ls` to print all the fasta file names in the directory `/project/stuckert/bioinformatics/lab2/fasta_files` to screen using this format:
+
+`Filename: shasta_i.fasta` where every fasta file prints `Filename: ` then the filename, all on its own line.
+
+Paste in the code. 
 
 **Question 7**: Paste in the output.
 

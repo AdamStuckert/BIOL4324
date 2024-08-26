@@ -157,7 +157,7 @@ more darwin_chapter.txt
 
 This is the last chapter from Charles Darwin’s last chapter of The Origin of Species’. Press space bar to continue scrolling through the file, type ‘q’ to quit. Now let us say that you want to only look at the first few lines of the file, just to verify it is what you think it is. You can do this by using the ‘head’ command. 
 
-**Question 8: how many lines does head show?**
+**Question 9: how many lines does head show?**
 
 ```bash
 head darwin_chapter.txt
@@ -187,7 +187,7 @@ Again, it might be easier to view what tail accomplishes with the `genes.txt` fi
 
 When you are working with data, you will want to sprinkle in many, many little sanity checks. This is especially true if you are trying to manipulate data or files in some fashion. One way I do this frequently is by counting lines of a file (or counting lines in the output of a chunk of code). You can do this with the `wc` command. `wc` is extremely useful! Make sure you look at the various options it has with the `man` program. 
 
-**Question 9:** How many lines are in this text file?
+**Question 10:** How many lines are in this text file?
 
 ```bash
 wc -l darwin_chapter.txt
@@ -207,13 +207,13 @@ grep "theory" darwin_chapter.txt
 
 Now, you may be interested in counting exactly how many times he says this. Luckily, we have a tool called *piping*, which allows us to link commands together. This is one of the most useful tools in your toolbox. What piping does is say take the output from the first command and use this to run the second command. Since grep outputs a single line from the file each time it finds the requested string, we can then pipe this in to the `wc` command to count the number of times he says grandeur. 
 
-**Question 10:** How many times does Darwin use the word "theory"?
+**Question 11:** How many times does Darwin use the word "theory"?
 
 ```bash
 grep "theory" darwin_chapter.txt | wc -l
 ```
 
-**Question 11:** Why might counting the number of times Darwin used theory in this way be problematic and imprecise? This will take some thinking about things like return characters and the way `wc` works--so make sure you looked at the man page!
+**Question 12:** Why might counting the number of times Darwin used theory in this way be problematic and imprecise? This will take some thinking about things like return characters and the way `wc` works--so make sure you looked at the man page!
 
 
 For the rest of this lab we will focus on some basic, but very useful information such as paths, the path, and variables. The examples I'm giving you are for a bash Linux system, but the ideas behind these are generally true for programming languages at large (although the syntax will be different).
@@ -233,9 +233,9 @@ create a directory structure that includes "path/demo/yall"
 
 ```
 
-**Question 12:** How did you create the directory structure "path/demo/yall"?
-**Question 13:** What is the absolute path of the directory "yall"?
-**Question 14:** If you are in the directory "path", how would you specify the relative path to the directory "yall"?
+**Question 13:** How did you create the directory structure "path/demo/yall"?
+**Question 14:** What is the absolute path of the directory "yall"?
+**Question 15:** If you are in the directory "path", how would you specify the relative path to the directory "yall"?
 
 ### Variables 
 
@@ -258,12 +258,12 @@ DIR=$(pwd)
 
 This is convenient, because you can use it to call the absolute path with ease, eg: `${DIR}/raw_data/alskdjfaojf.1.fa` 
 
-**Question 15:** Navigate back to the "path/demo" directory. Use the `pwd` command to create a variable called `CUR_DIR`. What command did you use to do this, how would you print this variable to screen, and what is the result of printing it to screen?
+**Question 16:** Navigate back to the "path/demo" directory. Use the `pwd` command to create a variable called `CUR_DIR`. What command did you use to do this, how would you print this variable to screen, and what is the result of printing it to screen?
 
 There are several variables that are built in within shell/bash. Prominent among these are yout `$PATH` and `$HOME`. Your `$PATH` includes all the directories in which the computer will automatically look for executables. So if you have a program executable called `supercoolsoftware` that is in your path, you can call it by just typing `supercoolsoftware`. Your `$HOME` is the location you are taken to when you login to the terminal. Note, you can change the directory you are automatically sent to on login, but your `$HOME` remains the same. 
 
-**Question 16:** How would you print your `$PATH` to screen, and what is in your `$PATH`?
+**Question 17:** How would you print your `$PATH` to screen, and what is in your `$PATH`?
 
-**Question 17:** We did quite a lot today! Try using `history` to see all the commands you typed today.
+**Question 18:** We did quite a lot today! Try using `history` to see all the commands you typed today.
 
 For more information on some of these commands, and to learn some new and useful ones, take a look at [this website](http://swcarpentry.github.io/2014-08-21-upenn/novice/ref/01-shell.html).

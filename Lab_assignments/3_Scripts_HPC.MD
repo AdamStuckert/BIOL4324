@@ -168,3 +168,5 @@ wget https://raw.githubusercontent.com/AdamStuckert/Gen711/master/Lab/Files/Tari
 ```
 
 Paste in your script.
+
+Look through those two files, to figure out what they are and what information they might contain.

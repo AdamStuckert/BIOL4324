@@ -101,7 +101,7 @@ These jobs may run a long time, so you can check the status of these jobs with t
            1284612     teach hello_wo astucker  R       0:04      1 compute-0-30
 ```
 
-It shows the job ID, the partition (in our case we have a dedicated partition for the course), name of the script running, etc. TIME refers to total running time. While the script runs it produces output to a logfile. By default, these are named "slurm-batchjob#.out". So the 
+It shows the job ID, the partition (in our case we have a dedicated partition for the course), name of the script running, etc. TIME refers to total running time. While the script runs it produces output to a logfile. By default, these are named "slurm-batchjob#.out". These log files are extremely useful for troubleshooting your code. You may want to rename them something more informative and easier to find (via `#SBATCH` commands like below).
 
 Many bioinformatic processes will take a lot of resources to properly run. Among the things you may want to modify are the memory allotment, number of threads requested, and the runtime. These are probably the most useful for the purposes of our class. But there are also ways to request multiple tasks that get spread out over several compute nodes. We have limited resources for the class that we need to share and will mostly be working with pared down datasets, so this is not much of an issue for us, but may be for you if you do bigger analyses. All of these are modified via `#SBATCH` at the very beginning of your script.
 
@@ -110,6 +110,7 @@ Many bioinformatic processes will take a lot of resources to properly run. Among
 #SBATCH t 1-00:01 # total requested time the job may run in D-HH:MM
 #SBATCH --cpus-per-task=4 # requests 4 threads/cpus per task. You can also set ntasks, but by default it is 1
 #SBATCH --mem=10Gb # specify the amount of memory to request for the job
+#SBATCH --output=%x.%j.out # specify the output file name. You can specify it however you want, but this is a nice automatic way to specify output files. In this case %x = job name; %j = job id
 ```
 
 Note: if you run over time requested or the memory requested you will get an error message similar to this:

@@ -156,4 +156,15 @@ Just like on the login node or on a compute node, you can execute scripts/comman
 
 **Question 9:** What is the output of this?
 
-Last thing, it is very important to exit your interactive session so that other people can use the resource by typing the `exit` command.
+Last thing to note for interactive sessions, it is very important to exit your interactive session so that other people can use the resource by typing the `exit` command.
+
+Now, I want you to put everything you have learned together and submit a job to SLURM which contains a conditional statement. Let's go! 
+
+**Question 10:** Write and submit a SLURM script which uses an if/else statement to download two files (`Taricha_granulosa_subsampled.1.fq` and `Taricha_granulosa_subsampled.2.fq`) into a directory called `newt` only if they have not already been downloaded. This if/else statement should also tell you which file you are on and if it is already present/if it is downloading the new file. This job should ask for 10 gigs of memory, 5 hours of run time, and write to an output file named "She_turned_me_into_a_newt"). Use the below code to download the files:
+
+```
+wget https://raw.githubusercontent.com/AdamStuckert/Gen711/master/Lab/Files/Taricha_granulosa_subsampled.1.fq
+wget https://raw.githubusercontent.com/AdamStuckert/Gen711/master/Lab/Files/Taricha_granulosa_subsampled.2.fq
+```
+
+Paste in your script.

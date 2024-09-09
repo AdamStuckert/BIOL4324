@@ -37,7 +37,7 @@ You've now saved your first script!
 Let's take a look at this script with the `ls -l` command (the `-l` flag is for "long"). It should look something like this:
 
 ```
-drwxr-xr-x 8 adamstuckert adamstuckert 4096 Dec 20  2022 sshfs-win
+drwxr-xr-x 8 adamstuckert adamstuckert 4096 Aug 20  2024 sshfs-win
 ```
 
 The first group of characters and hyphens are the permissions. The first character is either a `d` for directory or `-` for file. The next 9 characters are in  groups of 3 (like codons!), and represent wether the owner, group, and everyone have read (r), write (w), and executable (x) privileges in that order. If those are represented by a `-` then that person/group does not have permission for that task. The first number represents the number of links or files in a directory. 

@@ -107,7 +107,7 @@ Many bioinformatic processes will take a lot of resources to properly run. Among
 
 ```bash
 #!/bin/bash
-#SBATCH t 1-00:01 # total requested time the job may run in D-HH:MM
+#SBATCH -t 1-00:01 # total requested time the job may run in D-HH:MM
 #SBATCH --cpus-per-task=4 # requests 4 threads/cpus per task. You can also set ntasks, but by default it is 1
 #SBATCH --mem=10Gb # specify the amount of memory to request for the job
 #SBATCH --output=%x.%j.out # specify the output file name. You can specify it however you want, but this is a nice automatic way to specify output files. In this case %x = job name; %j = job id

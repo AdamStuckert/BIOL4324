@@ -113,3 +113,17 @@ You will be asked to enter a passphrase. You must remember this password. Or you
 
 Now, try pushing it again!
 
+Once you have succesfully pushed this to your GitHub repo, navigate to your repo in a browser and take a look at it.
+
+**Question 10:** Paste in a screenshot of the updated repo.
+
+One benefit of git is that you can collaborate with people to code together. For now we won't do this, but instead you will make edits online and `pull` them to the local directory. In your browser, add a new file called `README.MD`. You may need to mess around for a minute to figure out how to do this. Once you have done this, pull it down to the local directory.
+
+```
+git pull origin main
+```
+
+Make sure this works. Assuming it did....check your git log with `git log`.
+
+**Question 11:** Paste in your git log.
+

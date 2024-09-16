@@ -83,3 +83,33 @@ Now we will "push" this online to GitHub.
 
 >**Warning:** Never git add, commit, or push sensitive information, for example passwords or API keys, to a remote repository.
 
+The best way to push your local repository on to GitHub is to actually push it _via command line` using `GitHub CLI`. However, I don't want to make you install that today, so we will do it _via the GitHub website_. You can [follow the directions on the GitHub wiki to setup a repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository).
+
+**Question 9:** Paste in a screenshot of the new repo.
+
+Now, push your local repo to the repo you just created on GitHub
+
+```
+git remote add origin URL4YOURNEWREPO.git # please change the url...
+git push -u origin main # main is the branch name :) 
+```
+
+You should have received an error. You need to create a "key" to authenticate your GitHub account.
+
+```
+ssh-keygen -t ed25519 -C "COUGARNETEMAIL@..."
+```
+
+You will be asked to enter a passphrase. You must remember this password. Or you can just hit enter and have no password, if you are not particularly safety-conscious. Now you must add this ssh key to your GitHub account:
+
+1. In the upper-right corner of any page on GitHub, click your profile photo, then click  Settings.
+2. In the "Access" section of the sidebar, click  SSH and GPG keys.
+3. Click New SSH key or Add SSH key.
+4. In the "Title" field, add a descriptive label for the new key. For example, since we are using opuntia it makes sense to name it "Opuntia".
+5. Select the type of key, either authentication or signing. For more information about commit signing, see "About commit signature verification."
+6. In the "Key" field, paste your public key.
+7. Click Add SSH key.
+8. If prompted, confirm access to your account on GitHub. For more information, see "Sudo mode."
+
+Now, try pushing it again!
+

@@ -98,9 +98,20 @@ You should have received an error. You need to create a "key" to authenticate yo
 
 ```
 ssh-keygen -t ed25519 -C "COUGARNETEMAIL@..."
+# note it is possible you will need to use this: 
+# ssh-keygen -t rsa -b 4096 -C "COUGARNETEMAIL@..."
 ```
 
-You will be asked to enter a passphrase. You must remember this password. Or you can just hit enter and have no password, if you are not particularly safety-conscious. Now you must add this ssh key to your GitHub account:
+You will be asked to enter a passphrase. You must remember this password. Or you can just hit enter and have no password, if you are not particularly safety-conscious. It will tell you where the key is--MAKE SURE YOU  NOTE THIS.
+
+Of note: you need to **tell the cluster where to look for these keys!** You will need to edit your `~/.ssh/config` file to ADD this:
+
+```
+Host github.com 
+ IdentityFile ~/.ssh/id_rsa # here you will put the name of the key you just generated
+```
+
+Now you must add this ssh key to your GitHub account:
 
 1. In the upper-right corner of any page on GitHub, click your profile photo, then click  Settings.
 2. In the "Access" section of the sidebar, click  SSH and GPG keys.

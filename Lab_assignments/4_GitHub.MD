@@ -7,7 +7,9 @@ Today we will learn the basics of using version control via git and GitHub
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 **Question 1:** Is git installed on the cluster?
+
 **Question 2:** How do you tell if git is installed on the cluster?
+
 **Question 3:** What is the absolute path of the git install you will be using?
 
 ## GitHub

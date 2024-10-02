@@ -111,21 +111,17 @@ Look up *Drosophila*'s classification, and then choose the appropriate lineage f
 
 **Question 9:** What lineage did you choose?
 
-You need to download this data. You can auto-download data with `compleasm`, but many HPCs restrict or don't have compute nodes with internet access to search/download files via SLURM scripts. So lets do that outside of a job (this is a quick download so it is fine to run on the head node). You will need to activate your conda environment where you installed compleasm.
+You need to download this data. You can auto-download data with `compleasm`, but many HPCs restrict or don't have compute nodes with internet access to search/download files via SLURM scripts. So lets do that outside of a job (this is a quick download so it is fine to run on the head node). Compleasm has a method to auto-download the busco data, but honestly I was having difficulties with this today so I bypassed it. Choose the lineage you want, download it with the link:
 
 ```
-singularity exec -B ${PWD},/other/directory/tobind/,/a/third/directory/tobind /path/to/image/compleasm.sif download LINEAGE_YOU_CHOSE --library_path .
-conda activate ENV
-compleasm download LINEAGE_YOU_CHOSE --library_path . # here the "." refers to the current directory. so it will download the dataset to where you currently are. This is common syntax. You may want to download somewhere else though, which you can specify.
+wget LINK2FILE
+tar -xzf FILE.tar.gz
 ```
-
 
 Ok, now back to compleasm. Code will be similar to this, change all the variables for your assemnbly, lineage, etc:
 
 ```bash
-compleasm run --assembly_path $ASSEMBLY \
---output_dir $BUSCO_OUT --threads 5 --lineage $LINEAGE \
---library_path $LIBRARY # you may need a "-m lite" flag" --even still it may not work if the assembly is too poor
+singularity exec -B [comma delimited list of directories to bind] /path2compleasm/compleasm.sif compleasm run  --assembly_path ASSEMBLY --output_dir OUTPUT_DIRECTORY --threads NUM_THREADS --lineage LINEAGE_YOU_CHOSE --library_path /PATH2LIBRARY -m lite
 ```
 
 **Question 10:** Paste in your slurm script. 

@@ -77,9 +77,10 @@ conda install -y -c bioconda -c conda-forge compleasm
 Install `SPades`. This is an assembler for a variety of things, including Illumina data of small genomes.
 
 ```bash
-wget http://cab.spbu.ru/files/release3.15.5/SPAdes-3.15.5-Linux.tar.gz
-tar -xzf SPAdes-3.15.5-Linux.tar.gz # the downloaded file is a "tarball" which you have to extract (like a zipped folder)
-cd SPAdes-3.15.5-Linux/bin/ # this is the directory your program lives in.
+wget https://github.com/ablab/spades/releases/download/v4.0.0/SPAdes-4.0.0-Linux.tar.gz
+tar -xzf SPAdes-4.0.0-Linux.tar.gz # the downloaded file is a "tarball" which you have to extract (like a zipped folder)
+cd SPAdes-4.0.0-Linux/bin/ # this is the directory your program lives in.
+
 ```
 
 Test this install out immediately! Run `./spades.py`. If you get the help message from SPades then your install isn't immediately obviously broken. You can and SHOULD test software installs before using them on real data. Software often comes with toy datasets to use. For today, we will "test" it with our small datasets.

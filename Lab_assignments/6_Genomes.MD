@@ -27,7 +27,7 @@ Singularity is a bit weird, in that it is entirely self-contained. As a result, 
 singularity exec -B ${PWD},/other/directory/tobind/,/a/third/directory/tobind /project/stuckert/software/salmon_1.10.3.sif COMMAND
 ```
 
-You specify the command (`singularity`), tell it to execute a command (`exec`), bind directories with `-B`, specify the image (the `.sif` file), and give the command of the program you are running.
+You specify the command (`singularity`), tell it to execute a command (`exec`), bind directories with `-B`, specify the image (the `.sif` file), and give the command of the program you are running. Some people are having issues with an out of memory issue for singularity. You can use this one: `/project/stuckert/bioinformatics/compleasm.sif`
 
 Install `SPades`. This is an assembler for a variety of things, including Illumina data of small genomes.
 
@@ -40,6 +40,10 @@ cd SPAdes-4.0.0-Linux/bin/ # this is the directory your program lives in.
 
 Test this install out immediately! Run `./spades.py`. If you get the help message from SPades then your install isn't immediately obviously broken. You can and SHOULD test software installs before using them on real data. Software often comes with toy datasets to use. For today, we will "test" it with our small datasets.
 
+To get the correct version of python, run:
+```bash
+module load python/3.11
+```
 
 **Question 3:**  What kind of file is `spades.py`?
 

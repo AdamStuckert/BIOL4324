@@ -21,6 +21,14 @@ singularity pull --dir $(pwd) compleasm.sif docker://huangnengcsu/compleasm:v${V
 
 **Question 2:** How did you tell it where to download this, and what does the syntax mean/do?
 
+Singularity is a bit weird, in that it is entirely self-contained. As a result, you need to "bind" directories that you want to interact with the singularity image. These are comma delimited. A typical example looks like this:
+
+```bash
+singularity exec -B ${PWD},/other/directory/tobind/,/a/third/directory/tobind /project/stuckert/software/salmon_1.10.3.sif COMMAND
+```
+
+You specify the command (`singularity`), tell it to execute a command (`exec`), bind directories with `-B`, specify the image (the `.sif` file), and give the command of the program you are running.
+
 Install `SPades`. This is an assembler for a variety of things, including Illumina data of small genomes.
 
 ```bash
@@ -81,8 +89,9 @@ Here is the SPAdes github page, if you're interested in more of the options: htt
 
 The data for this assembly are here: `/project/stuckert/bioinformatics/lab4`. These are the files with `Illumina` in the file name. Remember, Illumina data is _usually paired end_ so there are two sets of reads, a forward and reverse. 
 
-spades.py -t 5 -m 55 --mp1-rf -k 95  --pe1-1 FORWARD_READS  --pe1-2 REVERSE_READS  -o illumina_assembly
-  
+`spades.py -t 5 -m 55 --mp1-rf -k 95  --pe1-1 FORWARD_READS  --pe1-2 REVERSE_READS  -o illumina_assembly`
+
+Note, the syntax may have changed some since I wrote this syntax out. You may need to update arguments to reflect this. You can get information on the program from either its website OR by running `spades.py -h`. Remember, you need to make sure you are specifying where your spades file is...
   
 #### Evaluating our short read assembly  
 
@@ -105,6 +114,7 @@ Look up *Drosophila*'s classification, and then choose the appropriate lineage f
 You need to download this data. You can auto-download data with `compleasm`, but many HPCs restrict or don't have compute nodes with internet access to search/download files via SLURM scripts. So lets do that outside of a job (this is a quick download so it is fine to run on the head node). You will need to activate your conda environment where you installed compleasm.
 
 ```
+singularity exec -B ${PWD},/other/directory/tobind/,/a/third/directory/tobind /path/to/image/compleasm.sif download LINEAGE_YOU_CHOSE --library_path .
 conda activate ENV
 compleasm download LINEAGE_YOU_CHOSE --library_path . # here the "." refers to the current directory. so it will download the dataset to where you currently are. This is common syntax. You may want to download somewhere else though, which you can specify.
 ```

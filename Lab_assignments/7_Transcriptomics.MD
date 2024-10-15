@@ -52,10 +52,12 @@ Verify that you have both datasets and that they are approximately the same size
 Back to the regularly scheduled lab. First we will run Trimmomatic to trim off adaptor sequences and then run Trinity. Note: these need to be run on the compute node and NOT the headnode!
 
 ```bash
-trimmomatic PE -threads 5 -baseout Taricha_granulosa_subsampled.TRIM.fastq Taricha_granulosa_subsampled.1.fq Taricha_granulosa_subsampled.2.fq LEADING:3 TRAILING:3 ILLUMINACLIP:/project/stuckert/bioinformatics/lab7/barcodes.fa:2:30:10:8:TRUE MINLEN:25
+java -jar trimmomatic-0.39.jar PE -threads 5 -baseout Taricha_granulosa_subsampled.TRIM.fastq Taricha_granulosa_subsampled.1.fq Taricha_granulosa_subsampled.2.fq LEADING:3 TRAILING:3 ILLUMINACLIP:/project/stuckert/bioinformatics/lab7/barcodes.fa:2:30:10:8:TRUE MINLEN:25
 ```
 
-Finally, we will run Trinity to assemble our transcriptome! Trinity runs in 3 parts (inchworm, chrysalis, butterfly), and will take a little bit of time to run.
+Read through the documentation to see what files trimmomatic produces, and which ones we want to use for downstream processes.
+
+Finally, we will run Trinity to assemble our transcriptome! Trinity runs in 3 parts (inchworm, chrysalis, butterfly), and will take a little bit of time to run. Again, doe this in a _script or via an interactive session on a compute node._ Finally, remember how you downloaded Trinity, and make sure you call it correctly with the image file. If you need help, you can look above/to the genome assembly tutorial for hints.
 
 ```bash
 Trinity --SS_lib_type RF --no_version_check --seqType fq --output trinity/ --max_memory 15G --left $OUTPUT_FROM_TIMMOMATIC_LEFT  --right $OUTPUT_FROM_TIMMOMATIC_RIGHT  --CPU 5 --inchworm_cpu 5 --full_cleanup --no_bowtie

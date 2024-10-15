@@ -81,7 +81,7 @@ Good work! You've now assembled your first transcriptome! Lets take a look at th
 	4. Missing genes
 
 
-Next, we will move on to another approach to transcriptome assembly using SPAdes. You have installed this program. Please note that you need to use the `rnaspades.py` command. Use the documentation to figure out what command you should use.
+Next, we will move on to another approach to transcriptome assembly using SPAdes. You have installed this program. Please note that you need to use the `rnaspades.py` command. Use the documentation to figure out what command you should use, and you will have to remember/find where you installed it previously. If you can't remember, looking at the man page for the command `find` may help you out.
 
 **Question 6:** Paste in the text of your script here.
 

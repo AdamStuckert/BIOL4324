@@ -16,19 +16,23 @@ Tip: Make separate environments for different assemblers.
 First, install Trinity via conda. Remember that you will want to create the environment similar to how we did in the genome assembly lab.
 
 ```bash
-conda install -c bioconda trinity
+singularity pull --dir /PATH/TO/WHERE/YOU/WANT/TO/DOWNLOAD/TRINITY trinity.sif docker://trinityrnaseq/trinityrnaseq:latest
+singularity run -B $(pwd) trinity.sif
 
 ```
 
-Second, install SPAdes. Do you still have your spades installed from the other week> Great, then you are done.
+Second, install SPAdes. Do you still have your spades installed from the other week? Great, then you are done.
 
 Third, install compleasm. Oh good, you are already done since you installed it the other week.
 
 Fourth, install trimmomatic. This program does read trimming (barcodes, quality, etc).
 
 ```bash
-singularity pull --dir /PATH/TO/WHERE/YOU/WANT/TO/DOWNLOAD/TRINITY trinity.sif docker://trinityrnaseq/trinityrnaseq:latest
-singularity run -B $(pwd) trinity.sif
+wget https://github.com/usadellab/Trimmomatic/files/5854859/Trimmomatic-0.39.zip
+unzip Trimmomatic-0.39.zip 
+cd Trimmomatic-0.39/
+# test:
+java -jar trimmomatic-0.39.jar
 ```
 
  

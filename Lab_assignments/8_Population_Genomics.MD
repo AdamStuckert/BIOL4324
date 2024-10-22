@@ -16,17 +16,7 @@ For the purposes of this lab, what I've done is selected 5 random individuals fr
 
 OK, background over, time to do some population genomics.
 
-First up, download the data.
-
-```bash
-# download data
-mkdir reads
-cd reads
-svn checkout https://github.com/AdamStuckert/Gen711/trunk/Lab/Files/RAD_data
-# move all the reads out of that folder into reads
-mv RAD_data/*gz .
-cd ..
-```
+The data for this lab live here: `/project/stuckert/bioinformatics/RAD_data`.
 
 **Question 1:** How many reads are they, and how many reads do they each have? If you are using `grep`, there is an equivalent version that allows use of gzipped files called `zgrep`.
 

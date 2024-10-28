@@ -45,7 +45,7 @@ Let's make a new directory for this lab so that your files won't be in with ever
 
 Since the genomes and protein sets they have on Ensembl are already annotated with the sequence identities, they are a great place to start for a tree like this. We are going to be working with rodents again, mostly because they are easy to find, pretty diverse, and ensembl has a LOT of them.  
 
-We will need quite a few of them for this tree, and you will have to do some commands to each dataset that we download, so strap in.   Note, **for loops** would be very useful and this could be an excellent chance to use them!
+We will need quite a few of them for this tree, and you will have to do some commands to each dataset that we download, so strap in.   Note, **for loops** would be very useful and this could be an excellent chance to use them! **In general, this lab is an excellent opportunity to practice loops.** 
 
 First, download the datasets from these links using some of the commands we've used before (if you can't remember them, look at how we downloaded SPades in lab 4):
 - American beaver - ftp://ftp.ensembl.org/pub/release-99/fasta/castor_canadensis/pep/Castor_canadensis.C.can_genome_v1.0.pep.all.fa.gz  
@@ -101,7 +101,7 @@ Take a look at your files for each species and the sonic hedgehog gene. If you a
 
 ### Aligning the sequences and making the tree  
 
-We'll use mafft again with the default settings for the multiple sequence alignment. Put your own input and output file names in the appropriate places.  
+We'll use mafft again with the default settings for the multiple sequence alignment. Put your own input and output file names in the appropriate places.  Don't forget to run analyses in either a batch script or an interactive session, please and thank you.
 
     mafft --auto input.fa > output.fa  
 

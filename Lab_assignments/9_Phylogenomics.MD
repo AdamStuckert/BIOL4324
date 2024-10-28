@@ -25,7 +25,8 @@ If this does not work for you, or for whatever reason you are unable to do this,
 Next you will want to install the other programs we will use via conda. I suggest a fresh environment for todays lab.
 
 ```bash
-conda install -c bioconda mafft
+# conda install -c bioconda mafft
+singularity pull --dir $(pwd) mafft.sif https://depot.galaxyproject.org/singularity/mafft:7.525--h031d066_1
 conda install -c bioconda iqtree
 ```
 

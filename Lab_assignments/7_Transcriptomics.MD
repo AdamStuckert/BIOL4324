@@ -13,7 +13,7 @@ For lab today we will be taking two different approaches to transcriptome assemb
 
 Tip: Make separate environments for different assemblers.
 
-First, install Trinity via conda. Remember that you will want to create the environment similar to how we did in the genome assembly lab.
+First, install Trinity via singularity. Remember that you will want to create the environment similar to how we did in the genome assembly lab.
 
 ```bash
 singularity pull --dir /PATH/TO/WHERE/YOU/WANT/TO/DOWNLOAD/TRINITY trinity.sif docker://trinityrnaseq/trinityrnaseq:latest

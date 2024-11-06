@@ -136,3 +136,17 @@ In R, write this:
 **Question 6:** Paste in your tree file.
 
 **Question 7:** Based on your tree, what is the species most closely related to the beaver?
+
+
+## ADDENDUM
+
+For those of you who had trouble with the singularity mafft, try it via conda:
+
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh 
+ ## type yes when it asks yes/no
+## close your terminal and restart
+conda activate
+conda install bioconda::mafft
+```

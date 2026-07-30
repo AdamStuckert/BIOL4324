@@ -26,9 +26,10 @@ One of the most fundamental parts of bioinformatics is a basic familiarity with 
 
 ##### Mac users
 * Unix shell: Terminal, which is pre-installed on MacOSX. You can find it through the Finder by going to Go-> Utilities-> Terminal.
+* Termius: A free SSH client and terminal which you can install and enables scp options. This is what I currently use. [Termius website](https://termius.com/index.html)
 
 ##### Windows users
-* PuTTY: A terminal which you can install from [the putty website](https://www.putty.org/)
+* PuTTY: A terminal which you can install from [the putty website](https://putty.software/)
 * MobaXterm: A terminal which you can install from [the MobaXterm website](https://mobaxterm.mobatek.net/)
 * Built in Linux subsystem in Windows [Windows tech forum](https://techcommunity.microsoft.com/t5/windows-11/how-to-install-the-linux-windows-subsystem-in-windows-11/m-p/2701207)
 

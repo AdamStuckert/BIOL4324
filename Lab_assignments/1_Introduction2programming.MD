@@ -39,7 +39,7 @@ One of the most fundamental parts of bioinformatics is a basic familiarity with 
 
 If you are on a Mac and working through the terminal, or on a PC an working through MobaXterm, once you open the terminal you are **working in your computer's directories**. This means that you can accidentally delete/corrupt files on your personal computer, **including your operating system.** Please be extremely careful. I am not responsible for any personal sorrow you suffer in this manner.
 
-#### Introduction to Opuntia, the UH training High Performance Cluster for this course.
+#### Introduction to Sabine, the UH training High Performance Cluster for this course.
 
 In order to access this cluster, we have to 1) be on the UH network and 2) open a terminal window. 
 
@@ -48,7 +48,7 @@ You can be "on the UH network" via either the UH Secure wifi network or via the 
 In order to access the cluster from the terminal, you have to point your computer to the location you want to login to. The address for Opuntia is `opuntia.rcdc.uh.edu `, and to login you specify `cougarnet_accounte@opuntia.rcdc.uh.edu`  Your username is the same as your UH password. You use the ssh command to login. So, to access your account you would use:
 
 ```bash
-ssh your_username@opuntia.rcdc.uh.edu 
+ssh your_username@sabine.rcdc.uh.edu 
 ```
 
 Your terminal will then prompt you to provide your login information. Congrats! You are logged into the HPC and ready to SCIENCE!

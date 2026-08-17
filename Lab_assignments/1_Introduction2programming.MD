@@ -2,27 +2,6 @@
 
 One of the most fundamental parts of bioinformatics is a basic familiarity with the command line. Many things are Linux and bash based, so these are good skills to develop. 
 
-### Basic Unix rules
-
-* Everything is case sensitive. BIOL4324 is not the same as biol4324.
-
-* Unlike a GUI interface to view files on your personal computer, once you delete something it is **permanently gone**. You can easily delete an entire hard drive's worth of data by accident in seconds. I call this "pulling a Newhouse." A friend of mine did this to a hard drive in his lab, and there was much swearing.
-
-* Related to the above, there is no undo button. If you write over a file or make a change to it, the deed is done and cannot be undone.
-
-* The two points above are a very good reason why you should 1) be extremely careful when in terminal and 2) maintain good backup copies of all data outside of the environment you are working in! It is unreasonably easy to delete months and thousands of dollars worth of work.
-
-* Spaces in file names should be avoided. Spaces are a special character (represented as `\s`) and thus make things wacky. 
-
-* Your `$PATH` is the collection of locations where the computer looks for executables (programs).
-
-* Folders and Files are all you have. If you want to access one of these, you need to tell the computer EXACTLY where it is. 
-`/home/stuckert/biol4324/exam1_key.txt` will work (assuming you’ve spelled things correctly, and that the file really exists in that location), but `exam1_key.txt` may not.
-
-* Related to the above, any file/location can be specified relative to your current working directory (folder). So for example if I'm in the `biol4324` folder from the above example, I can point to the exam 1 key with `exam1_key.txt`. If I am in the `stuckert/` directory, I can point to the same file with `biol4324/exam1_key.txt`. Alternatively, I can use the *absolute path*, which specifies the full path to a file. In this case, I can use `/home/stuckert/biol4324/exam1_key.txt` to point to this exam key *no matter what directory I am currently in*. Giving *relative paths* is similar to giving someone directions to the nearest Shipley's from *your current location.* *Absolute paths* are similar to giving someone lat/long coordinates.
-
-* In this document, as in scripts generally, lines that begin with a `#` are comments and are not run.
-
 
 ##### Mac users
 * Unix shell: Terminal, which is pre-installed on MacOSX. You can find it through the Finder by going to Go-> Utilities-> Terminal.
@@ -43,7 +22,7 @@ If you are on a Mac and working through the terminal, or on a PC an working thro
 
 In order to access this cluster, we have to 1) be on the UH network and 2) open a terminal window. 
 
-You can be "on the UH network" via either the UH Secure wifi network or via the UH VPN. Please install the UH VPN so you may access the cluster when you are not on campus. [Instructions for the VPN can be found here.](https://uh.edu/infotech/services/computing/networks/vpn/)
+You can be "on the UH network" via *either the UH Secure wifi network or via the UH VPN*. Please install the UH VPN so you may access the cluster when you are not on campus. [Instructions for the VPN can be found here.](https://uh.edu/infotech/services/computing/networks/vpn/)
 
 In order to access the cluster from the terminal, you have to point your computer to the location you want to login to. The address for Opuntia is `opuntia.rcdc.uh.edu `, and to login you specify `cougarnet_accounte@opuntia.rcdc.uh.edu`  Your username is the same as your UH password. You use the ssh command to login. So, to access your account you would use:
 
@@ -52,6 +31,17 @@ ssh your_username@sabine.rcdc.uh.edu
 ```
 
 Your terminal will then prompt you to provide your login information. Congrats! You are logged into the HPC and ready to SCIENCE!
+
+### Basic Unix rules
+
+* Everything is case sensitive. BIOL4324 is not the same as biol4324.
+* Unlike a GUI interface to view files on your personal computer, once you delete something it is **permanently gone**. You can easily delete an entire hard drive's worth of data by accident in seconds. I call this "pulling a Newhouse." A friend of mine did this to a hard drive in his lab, and there was much swearing.
+* Related to the above, there is no undo button. If you write over a file or make a change to it, the deed is done and cannot be undone.
+* The two points above are a very good reason why you should 1) be extremely careful when in terminal and 2) maintain good backup copies of all data outside of the environment you are working in! It is unreasonably easy to delete months and thousands of dollars worth of work.
+* Spaces in file names should be avoided. Spaces are a special character (represented as `\s`) and thus make things wacky. 
+* Your `$PATH` is the collection of locations where the computer looks for executables (programs).
+* In this document, as in scripts generally, lines that begin with a `#` are comments and are not run.
+
 
 ### Basic commands
 * `pwd` print working directory
@@ -64,6 +54,28 @@ Your terminal will then prompt you to provide your login information. Congrats! 
 * `cp` copy a file
 * `man` gives information about a program. This is very useful.
 
+### Tree/directory structure
+
+Unlike your Mac OS/Windows OS, you don't have GUI access to click or drag and drop. Folders and files are all you have. If you want to access one of these, you need to tell the computer EXACTLY where it is. 
+`/home/stuckert/biol4324/exam1_key.txt` will work (assuming you’ve spelled things correctly, and that the file really exists in that location), but `exam1_key.txt` may not.
+
+Related to the above, any file/location can be specified relative to your current working directory (folder). So for example if I'm in the `biol4324` folder from the above example, I can point to the exam 1 key with `exam1_key.txt`. If I am in the `stuckert/` directory, I can point to the same file with `biol4324/exam1_key.txt`. Alternatively, I can use the *absolute path*, which specifies the full path to a file. In this case, I can use `/home/stuckert/biol4324/exam1_key.txt` to point to this exam key *no matter what directory I am currently in*. Giving *relative paths* is similar to giving someone directions to the nearest Shipley's from *your current location.* *Absolute paths* are similar to giving someone lat/long coordinates.
+
+Here is an example of what you might see within a directory:
+
+```
+Super_awesome_genomics_work/  <-- Your directory, note no spaces!
+├── main.sh                   <-- Your "main" script 
+├── scripts/                  <-- Modular sub-scripts or functions
+│   ├── 01_qc.sh
+│   ├── 02_trim.sh
+│   ├── 03_align.sh
+│   └── 04_quant_or_call.sh
+├── test_data/               <-- Downsampled testdata for fast execution and initial troubleshooting
+├── results/                 <-- You might find these important
+└── logs/                    <-- Output logs
+
+```
 
 ## LAB ASSIGNMENT
 
@@ -257,7 +269,7 @@ You can also specify a variable using the output of a command. To do this, you u
 DIR=$(pwd)
 ```
 
-This is convenient, because you can use it to call the absolute path with ease, eg: `${DIR}/raw_data/alskdjfaojf.1.fa` 
+This is convenient, because you can use it to call the absolute path with ease, eg: `${DIR}/raw_data/alskdjfaojf.1.fa`. This is often used in scripts, for example to set the output directory into a variable and make a file structure like above.
 
 **Question 16:** Navigate back to the "path/demo" directory. Use the `pwd` command to create a variable called `CUR_DIR`. What command did you use to do this, how would you print this variable to screen, and what is the result of printing it to screen?
 

@@ -24,7 +24,7 @@ In order to access this cluster, we have to 1) be on the UH network and 2) open 
 
 You can be "on the UH network" via *either the UH Secure wifi network or via the UH VPN*. Please install the UH VPN so you may access the cluster when you are not on campus. [Instructions for the VPN can be found here.](https://uh.edu/infotech/services/computing/networks/vpn/)
 
-In order to access the cluster from the terminal, you have to point your computer to the location you want to login to. The address for sabine is `sabine.rcdc.uh.edu `, and to login you specify `cougarnet_accounte@sabine.rcdc.uh.edu`  Your username is the same as your UH password. You use the ssh command to login. So, to access your account you would use:
+In order to access the cluster from the terminal, you have to point your computer to the location you want to login to. The address for sabine is `sabine.rcdc.uh.edu `, and to login you specify `cougarnet_accounte@sabine.rcdc.uh.edu`  Your username is the same as your UH username, and when it asks for your password it is the same as your cougarnet credentials. You use the ssh command to login. So, to access your account you would use:
 
 ```bash
 ssh your_username@sabine.rcdc.uh.edu 

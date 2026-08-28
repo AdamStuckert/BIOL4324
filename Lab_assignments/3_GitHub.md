@@ -4,7 +4,7 @@ For today's lab, we will be learning GitHub and Git commands. You will be using 
 
 You will follow this [GitHub tutorial to start](https://docs.github.com/en/get-started/using-github/hello-world). Work through these steps to see how GitHub works on your web browser. I think actually seeing the process is helpful.
 
-Next, you will read this second [GitHub tutorial](https://docs.github.com/en/get-started/using-git/about-git) to continue learning about Git, GitHub, and version control. You'll see why it is useful and helpful. Stop when you get to the examples with code, you will return here to work on a tutorial I provide you (based on the ones by GitHub, might as well use the training from the experts :) ).
+Next, you will read this second [GitHub tutorial](https://docs.github.com/en/get-started/using-git/about-git) to continue learning about Git, GitHub, and version control. You'll see why it is useful and helpful. Stop when you get to the examples with code, you will return here to work on a tutorial I provide you (based on the ones by GitHub, might as well use the training from the experts :smile: ).
 
 
 ## Create a new repository via command line

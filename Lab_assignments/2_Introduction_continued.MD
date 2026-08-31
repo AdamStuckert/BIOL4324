@@ -1,4 +1,4 @@
-
+## Scripts and HPC
 
 Today we will learn the basics of scripts, how to use an HPC, and conditionals/variables.
 
@@ -129,6 +129,7 @@ Design code to run through three conditions:
 
 Make sure to test it under each condition in your script!
 
+**Question 5:** Paste in your code for those three conditions.
 ## For loops
 
 
@@ -214,7 +215,9 @@ done
 
 BUT, we are missing Louie! We need to add the itty bitty kitty to the itty bitty kitty committee.
 
-Use my for loop above and a nested conditional to make files that start with "shasta" for each shasta, but do not start with "shasta" for Louie. Hint: start a command with `for file in i ii iii iv v vi vii louie` and go from there. Paste in your code.
+Use my for loop above and a nested conditional to make files that start with "shasta" for each shasta, but do not start with "shasta" for Louie. Hint: start a command with `for file in i ii iii iv v vi vii louie` and go from there. 
+
+**Question 6:** Paste in your code.
 
 Next time we will get into scripts and using the HPC.
 
@@ -234,8 +237,6 @@ On that note, it is time to learn about job scheduling software!
 ### SLURM
 
 SLURM is one of several job scheduling software programs which are in charge of managing who gets access to compute nodes and resources based on set criteria. The eytmology of SLURM is lost in the annals of time.
-
-**Question 5:** What do you think SLURM means?
 
 SLURM takes specialized scripts as input and will allocate needed resources based on the script. To submit this task to the scheduler, we use the `sbatch` command. This creates a *job* which will run the *script* when dispatched to a compute node which the queuing system has identified as being available to perform the work. So you could submit your Hello world script like this:
 
@@ -286,11 +287,11 @@ You may also cancel jobs with the `scancel JOBID` command (sub your job id numbe
 sleep 10m
 ```
 
-**Question 6:** Submit this script as a job. View your running jobs with one of the commands you've learned today, and cancel it with scancel. Screenshot your terminal to show me that you did this and paste it in.
+**Question 7:** Submit this script as a job. View your running jobs with one of the commands you've learned today, and cancel it with scancel. Screenshot your terminal to show me that you did this and paste it in.
 
 Available resources are typically determined by the physical setup of the cluster (ie, how many compute nodes there are, how many cpus each has, how much memory, etc). For this class we have been given a teaching allocation, so we have very limited resources. Since we are all in lab together running things at nearly the same time, I am going to cap our resources. **Unless I tell you otherwise, please use no more than 5 threads (`--cpus-per-task=5`) and 15 Gb of memory (`--mem=15Gb`).**
 
-**Question 7:** Please write the following: I, (your name here), do solemnly swear to use no more than 5 cpus and 15 Gb of memory per job I submit.
+**Question 8:** Please write the following: I, (your name here), do solemnly swear to use no more than 5 cpus and 15 Gb of memory per job I submit.
 
 ## Interactive jobs
 
@@ -302,7 +303,7 @@ srun --pty bash
 
 This will put you in the queue, and once you are allocated resources you will be given a prompt like normal. But instead of being on the login node, you are on the compute node. This allows you to test your code, and make edits as you go. It can be quite useful. You can also provide the same resource allocation requests within `srun` that you do within `sbatch` or your shell script. A good practice is to use a toy dataset that is significanlty pared down from the full dataset to test your code. You can then request minimal resources and run in an interactive session.
 
-**Question 8:** Take a look at the prompt on the login node. Now run an interactive job and look at the prompt. Is there anything different?
+Take a look at the prompt on the login node. Now run an interactive job and look at the prompt. Is there anything different?
 
 Just like on the login node or on a compute node, you can execute scripts/commands. But when you are in an interactive session it is easier to piece together pieces of a pipeline or troubleshoot. To demonstrate that you can execute scripts/commands in the same manner, execute this shell script:
 
@@ -316,13 +317,13 @@ Last thing to note for interactive sessions, it is very important to exit your i
 
 Now, I want you to put everything you have learned together and submit a job to SLURM which contains a conditional statement. Let's go! 
 
-**Question 10:** Write and submit a SLURM script which uses an if/else statement to download two files (`Taricha_granulosa_subsampled.1.fq` and `Taricha_granulosa_subsampled.2.fq`) into a directory called `newt` only if they have not already been downloaded. This if/else statement should also tell you which file you are on and if it is already present/if it is downloading the new file. This job should ask for 10 gigs of memory, 5 hours of run time, and write to an output file named "She_turned_me_into_a_newt"). Use the below code to download the files:
+Write and submit a SLURM script which uses an if/else statement to download two files (`Taricha_granulosa_subsampled.1.fq` and `Taricha_granulosa_subsampled.2.fq`) into a directory called `newt` only if they have not already been downloaded. This if/else statement should also tell you which file you are on and if it is already present/if it is downloading the new file. This job should ask for 10 gigs of memory, 5 hours of run time, and write to an output file named "She_turned_me_into_a_newt"). Use the below code to download the files:
 
 ```
 wget https://raw.githubusercontent.com/AdamStuckert/Gen711/master/Lab/Files/Taricha_granulosa_subsampled.1.fq
 wget https://raw.githubusercontent.com/AdamStuckert/Gen711/master/Lab/Files/Taricha_granulosa_subsampled.2.fq
 ```
 
-Paste in your script.
+**Question 10:** Paste in your script.
 
 Look through those two files, to figure out what they are and what information they might contain.

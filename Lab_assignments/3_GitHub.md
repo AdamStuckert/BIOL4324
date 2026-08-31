@@ -127,4 +127,4 @@ gh pr create --title "YOUR TITLE HERE" \
              --base main
 ```
 
-
+Make sure you submit your PR, and that you submit a screenshot in the Lab 3 homework on canvas.

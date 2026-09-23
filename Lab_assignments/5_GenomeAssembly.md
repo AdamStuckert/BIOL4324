@@ -1,7 +1,14 @@
 
 ## Genome assembly
 
-## Genome assembly
+### NOTE:
+
+Given resource allocations, please do not run the assemblies on the whole genomic data. Download a SUBSET of the data with the `fastq-dump` or `fasterq-dump` and run your assemblies with that and **NOT** the full dataset.
+
+For assembly metric analyses, please use these files:
+Spades assembly: `/project/stuckert/astucker/genome_assembly/illumina_assembly/scaffolds.fasta`
+hifiasm assembly: `/project/stuckert/astucker/genome_assembly/SRR11442117.hifiasm.bp.p_ctg.fa`
+
 
 Today we will be using public data to assemble and assess the genome of the fruit fly we worked with last week: *Drosophila sechellia*. These data come from [Tvedte et al. 2021](https://academic.oup.com/g3journal/article/11/6/jkab083/6188627?login=true#304735456). Please note that for this class we are using a small portion of data, less than most people would use for a genome assembly (people often shoot for 30X coverage for assemblies). As a result of this, you should not expect to get particularly amazing genome assemblies!
 
@@ -160,3 +167,5 @@ Which assembly is better, and which do you have more confidence in. Why?
 
 
 For your assignment on Canvas, please send me your script and make it readable. You will also need to discuss the results from both genome assessment methods, and how the two assemblies compare.
+
+

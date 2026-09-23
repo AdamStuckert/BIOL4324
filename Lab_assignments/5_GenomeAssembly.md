@@ -10,6 +10,8 @@ Spades assembly: `/project/stuckert/astucker/genome_assembly/illumina_assembly/s
 hifiasm assembly: `/project/stuckert/astucker/genome_assembly/SRR11442117.hifiasm.bp.p_ctg.fa`
 
 
+## Genome assembly work
+
 Today we will be using public data to assemble and assess the genome of the fruit fly we worked with last week: *Drosophila sechellia*. These data come from [Tvedte et al. 2021](https://academic.oup.com/g3journal/article/11/6/jkab083/6188627?login=true#304735456). Please note that for this class we are using a small portion of data, less than most people would use for a genome assembly (people often shoot for 30X coverage for assemblies). As a result of this, you should not expect to get particularly amazing genome assemblies!
 
 As an aside, I suggest creating a new directory for every lab we do (e.g., something called "lab5" or "genome_assembly") so that you don't have a bajillion files in your home directory. That can get reaaaaaaally confusing, reallllllly quickly. Good data and file management will save you a lot of hassle in the future.

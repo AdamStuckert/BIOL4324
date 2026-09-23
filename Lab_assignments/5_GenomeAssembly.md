@@ -5,6 +5,8 @@
 
 Given resource allocations, please do not run the assemblies on the whole genomic data. Download a SUBSET of the data with the `fastq-dump` or `fasterq-dump` and run your assemblies with that and **NOT** the full dataset.
 
+If you have issues installing hifiasm: `/project/stuckert/astucker/genome_assembly/hifiasm-0.23.0/hifiasm`
+
 For assembly metric analyses, please use these files:
 Spades assembly: `/project/stuckert/astucker/genome_assembly/illumina_assembly/scaffolds.fasta`
 hifiasm assembly: `/project/stuckert/astucker/genome_assembly/SRR11442117.hifiasm.bp.p_ctg.fa`

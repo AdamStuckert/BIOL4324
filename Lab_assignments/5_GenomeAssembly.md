@@ -159,4 +159,4 @@ We will use a file from each of our evaluation commands to compare these two ass
 Which assembly is better, and which do you have more confidence in. Why? 
 
 
-For your assignment on Canvas, please send me your script. You will also need to discuss the results from both genome assessment methods, and how the two assemblies compare.
+For your assignment on Canvas, please send me your script and make it readable. You will also need to discuss the results from both genome assessment methods, and how the two assemblies compare.

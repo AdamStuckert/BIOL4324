@@ -8,8 +8,8 @@ Given resource allocations, please do not run the assemblies on the whole genomi
 If you have issues installing hifiasm: `/project/stuckert/bioinformatics/software/hifiasm-0.23.0/hifiasm`
 
 For assembly metric analyses, please use these files:
-Spades assembly: `/project/stuckert/astucker/genome_assembly/illumina_assembly/scaffolds.fasta`
-hifiasm assembly: `/project/stuckert/astucker/genome_assembly/SRR11442117.hifiasm.bp.p_ctg.fa`
+Spades assembly: `/project/stuckert/bioinformatics/lab5_genome_assembly/SPAdes.scaffolds.fasta`
+hifiasm assembly: `/project/stuckert/bioinformatics/lab5_genome_assembly/SRR11442117.hifiasm.bp.p_ctg.fa`
 
 
 ## Genome assembly work

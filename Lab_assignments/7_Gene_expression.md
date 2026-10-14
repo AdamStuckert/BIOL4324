@@ -145,7 +145,7 @@ library(ggplot2)
 ```
 
 
-Now, we will import the data. In R a `<-` symbol assigns the right side of the arrow to the left (sort of like creating a variable with the "=" in bash, but not equivalent).  So download the data and open it up:
+Now, we will import the data. In R a `<-` symbol assigns the right side of the arrow to the left (sort of like creating a variable with the "=" in bash, but not equivalent).  I have [https://github.com/AdamStuckert/BIOL4324/blob/main/Lab_assignments/gene.table.simulated.tsv](a full dataset for you to work with) (because you can't get DE genes from a heavily subsetted dataset). So download the data and open it up:
 
 ```
 counts_matrix <- read.table("gene.table.tsv", header = TRUE, sep = "", row.names = 1)
